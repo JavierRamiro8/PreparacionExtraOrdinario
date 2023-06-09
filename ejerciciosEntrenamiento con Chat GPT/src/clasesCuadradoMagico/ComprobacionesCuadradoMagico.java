@@ -38,14 +38,14 @@ public class ComprobacionesCuadradoMagico {
 
     // Calculamos la suma de la primera fila y la tomamos como referencia. Todas las
     // demás
-    // sumas debnumeroFilasen ser iguales
-    for (int col = 0; col < numeroColumnas; col++) {
+    // sumas deben ser iguales
+    for (int col = 0; col < tamanio; col++) {
       sumaReferencia += arrayBidimensional[0][col];
     }
 
     // Comprobamos que la suma de todas las filas, menos la primera, coincidan con
     // la suma de referencia
-    for (int i = 1; i < numeroFilas; i++) {
+    for (int i = 1; i < tamanio; i++) {
       sumaFila = 0;
       for (int j = 0; j < numeroColumnas; j++) {
         sumaFila += arrayBidimensional[i][j];
@@ -59,9 +59,9 @@ public class ComprobacionesCuadradoMagico {
 
     // Comprobamos que la suma de todas las columnas coincidan con la suma de
     // referencia
-    for (int columna = 0; columna < numeroColumnas; columna++) {
+    for (int columna = 0; columna < tamanio; columna++) {
       sumaColumna = 0;
-      for (int fila = 0; fila < numeroColumnas; fila++) {
+      for (int fila = 0; fila < tamanio; fila++) {
         sumaColumna += arrayBidimensional[fila][columna];
       }
 
@@ -72,7 +72,7 @@ public class ComprobacionesCuadradoMagico {
     }
 
     // Sumas de Diagonales
-    for (int i = 0; i < numeroFilas; i++) {
+    for (int i = 0; i < tamanio; i++) {
       sumaDiagonalIzqDer += arrayBidimensional[i][i];
     }
 
@@ -80,8 +80,8 @@ public class ComprobacionesCuadradoMagico {
       return false;
     }
 
-    for (int i = 0; i < numeroFilas; i++) {
-      sumaDiagonalDerIzq += arrayBidimensional[i][numeroFilas - 1 - i];
+    for (int i = 0; i < tamanio; i++) {
+      sumaDiagonalDerIzq += arrayBidimensional[i][tamanio - 1 - i];
     }
     if (sumaReferencia != sumaDiagonalDerIzq) {
       return false;
