@@ -16,15 +16,10 @@ public abstract class Vehiculo {
         return matricula;
     }
 
-    public abstract void calcularImporte();
+    public abstract String calcularImporte();
 
     @Override
     public String toString() {
-        if(matricula=="" || matricula==null){
-            return "La matricula no es valida o no se ha introducido";
-        }else {
         return "matricula: " + matricula;
-        }
     }
-
 }

@@ -41,22 +41,22 @@ public class Coche extends Vehiculo {
     return largo;
   }
 
-  public void calcularImporte() {
+  public String calcularImporte() {
     final int numeroCalculoCoche = 5;
     Double importeCoche = numeroCalculoCoche * getLargo();
-    System.out.println("El precio por el coche es: " + importeCoche);
+    return "El precio por el coche es: " + importeCoche;
   }
 
   @Override
   public String toString() {
-    if (marca.isEmpty()) {
-      return "";
-    } else if (modelo.isEmpty()) {
-      return "";
+    if (super.getMatricula() == null || super.getMatricula().isEmpty() || marca.isEmpty() || modelo.isEmpty()
+        || largo <= 0) {
+      return "Valores Incorrectos";
     } else {
-      return enumAparcamiento.COCHE + "--- " + super.toString() + " " + " Marca y modelo: " + getMarca()
+      return enumAparcamiento.COCHE + "--- " + super.toString() + " ----- " + " Marca y modelo: " + getMarca()
           + getModelo()
-          + " Largo: " + getLargo() + "m";
+          + " ---- Largo: " + getLargo() + "m " + calcularImporte() + " " + "y el coche tiene que pasar la revision en: "
+          + pasarRevision() + " anios";
     }
   }
 }
