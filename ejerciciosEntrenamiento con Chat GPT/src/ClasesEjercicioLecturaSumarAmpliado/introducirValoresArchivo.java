@@ -3,7 +3,6 @@ package ClasesEjercicioLecturaSumarAmpliado;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import FicherosLectura.*;
 
 public class introducirValoresArchivo extends introducirValores {
     public static String archivo = "entradaParaMainEjercicioLecturaSumarAmpliado.txt";

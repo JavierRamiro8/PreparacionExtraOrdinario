@@ -22,12 +22,12 @@ public class MainCuadradoMagico {
 };
         ComprobacionesCuadradoMagico comprobacionEsMagico=new ComprobacionesCuadradoMagico();
         boolean esMagico=comprobacionEsMagico.EsCuadradadoMagico(arrayBiNumeros);
-        System.out.println("¿El cuadrado es magico? "+ esMagico);
+        System.out.println("El cuadrado es magico: "+ esMagico);
         arrayBiNumeros=arrayNuevosValores;
         esMagico=comprobacionEsMagico.EsCuadradadoMagico(arrayBiNumeros);
-        System.out.println("¿El cuadrado es mágico? "+ esMagico);
+        System.out.println("El cuadrado es mágico: "+ esMagico);
         arrayBiNumeros=arrayNoCuadradoMagico;
         esMagico=comprobacionEsMagico.EsCuadradadoMagico(arrayBiNumeros);
-        System.out.println("¿El cuadrado es mágico? "+ esMagico);
+        System.out.println("El cuadrado es mágico: "+ esMagico);
     }
 }
